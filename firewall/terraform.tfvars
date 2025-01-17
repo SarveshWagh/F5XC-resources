@@ -1,0 +1,5 @@
+appfirewall   = "dev-app-fw"
+mynamespace   = "wagh"
+mydescription = "This is the firewall which will be used for dev environments"
+api_p12_file  = "xxxx"
+api_url       = "xxxx"

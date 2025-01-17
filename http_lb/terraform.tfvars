@@ -1,0 +1,13 @@
+lbname           = "dev-lb-1"
+mynamespace      = "wagh"
+mydescription    = "This loadbalancer will be used for development purpose"
+http_redirect    = true
+add_hsts         = true
+no_mtls          = true
+poolname1        = "germany-origin-1"
+poolname2        = "germany-origin-2"
+poolname3        = "sweden-origin-1"
+appfirewallname1 = "dev-app-fw"
+appfirewallname2 = "test-app-fw"
+api_p12_file     = "./sdc-support.console.ves.volterra.io.api-creds.p12"
+api_url          = "https://sdc-support.console.ves.volterra.io/api"

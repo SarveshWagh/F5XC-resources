@@ -1,0 +1,5 @@
+alert_receiver_name = "test-alert-receiver"
+alert_policy_name = "wagh-alert-policy"
+mynamespace   = "wagh"
+api_p12_file  = "xxxx"
+api_url       = "xxxx"

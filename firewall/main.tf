@@ -1,5 +1,5 @@
 #This terraform script creates a default WAF object on the XC console as is.
-#Please read the instructions and make the changes accordingly if you would like to alter the default configuration.
+#Please read the instructions and make the changes accordingly if you would like to alter the default configurations.
 
 resource "volterra_app_firewall" "app-fw-1" {
   name        = var.appfirewall

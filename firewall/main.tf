@@ -7,33 +7,39 @@ resource "volterra_app_firewall" "app-fw-1" {
   namespace   = var.mynamespace
   
   #Enforcement mode
-  blocking    = false # This can be set to 'true' when you wish to go to mitigation
-  default_detection_settings = true #Use "Security Policy Settings" if you would like to alter it 
-  
-#"Security Policy Settings starts"
-  detection_settings {
-    signature_selection_setting {
+  # blocking    = false # This can be set to 'true' when you wish to go to mitigation
+  monitoring = true # This can be set to 'true' when you wish to go to monitoring
+  default_detection_settings = true #Alter the options in "Security Policy Settings" only if you would like to alter default_detection_settings. Its highly encouraged to go with the default_detection_settings
+
+ # ===============
+ # "Security Policy Settings starts" - Alter the Security Policy Settings only when you dont want to use the default_detection_settings
+  # detection_settings {
+  #   signature_selection_setting {
         
-        default_attack_type_settings = true #Use below code if you would like to alter the "Attack Signatures and Signature Selection By Accuracy"
+        # default_attack_type_settings = true #Use below code if you would like to alter the "Attack Signatures and Signature Selection By Accuracy"
         
-        #Attack Signatures
+        # Attack Signatures
         # attack_type_settings {
         #   disabled_attack_types = [ "ATTACK_TYPE_BUFFER_OVERFLOW", "ATTACK_TYPE_COMMAND_EXECUTION" ]
         # }
 
         #Signature Selection By Accuracy
-        high_medium_low_accuracy_signatures = true #1 #You can use one 1,2 or 3
+        # high_medium_low_accuracy_signatures = true #1 #You can use one 1,2 or 3
         # high_medium_accuracy_signatures = true #2
         # only_high_accuracy_signatures = true #3
 
-    }
+    # }
+    # ===============
     
+    # ===============
     #Automatic Attack Signatures Tuning
-    disable_suppression = true
+    # disable_suppression = true
     # enable_suppression = true
+    # ===============
 
+    # ===============
     # Attack Signatures Staging
-    disable_staging = true
+    # disable_staging = true
 
     # Use below code if you would like to alter the "Attack Signatures Staging"
     # stage_new_signatures {
@@ -43,21 +49,27 @@ resource "volterra_app_firewall" "app-fw-1" {
     # stage_new_and_updated_signatures {
     #   staging_period = 7
     # }
-    
-    # Threat Campaigns
-    disable_threat_campaigns = true
-    # enable_threat_campaigns = true
+    # ===============
 
+    # ===============
+    # Threat Campaigns
+    # disable_threat_campaigns = true
+    # enable_threat_campaigns = true
+    # ===============
+
+    # ===============
     # Violations
-    default_violation_settings = true 
+    # default_violation_settings = true 
     #Use below code if you would like to alter the "Attack Signatures and Signature Selection By Accuracy"
     
     # violation_settings {
     #   disabled_violation_types = [ "VIOL_HTTP_PROTOCOL_BAD_HTTP_VERSION", "VIOL_EVASION_BARE_BYTE_DECODING" ]
     # }
+    # ===============
     
+    # ===============
     # Signature-Based Bot Protection
-    default_bot_setting = true
+    # default_bot_setting = true
 
     #Use below code if you would like to alter the "Signature-Based Bot Protection"
     # bot_protection_setting {
@@ -65,7 +77,9 @@ resource "volterra_app_firewall" "app-fw-1" {
     #     suspicious_bot_action = "Report"
     #     malicious_bot_action = "Block"
     # }
-  }
+    # ===============
+
+  # }
   # "Security Policy Settings ends"
 
   #Advanced configuration

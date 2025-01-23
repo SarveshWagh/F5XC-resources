@@ -1,0 +1,15 @@
+useridentname = "sarvesh-wagh-userident"
+servicepolicyname = "sarvesh-wagh-servicepolicy"
+prefixsetname = "sarvesh-wagh-prefixset"
+mum_policy_name = "sarvesh-wagh-mum-policy"
+add_hsts = true
+no_mtls = true
+port = "443"
+http_redirect = true
+http_lb_name = "sarvesh-wagh-http-lb"
+firewall_name = "sarvesh-wagh-app-firewall"
+origin_pool_name = "sarvesh-wagh-origin-pool"
+health_check_name = "sarvesh-wagh-hc"
+mynamespace      = "wagh"
+api_p12_file  = "xxxx"
+api_url       = "xxxx"

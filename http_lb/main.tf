@@ -100,6 +100,10 @@ resource "volterra_http_loadbalancer" "sample-lb" {
       namespace = "shared"
       name = "shali-sp-shared"
     }
+    policies {
+      namespace = "wagh"
+      name = "sar-allowed-ip-list"
+    }
   }
 
   # service_policies_from_namespace = true #3

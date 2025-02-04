@@ -44,6 +44,12 @@ module "mum_policy" {
   mynamespace_insidemodule = var.mynamespace
 }
 
+module "primary_dns_zone" {
+  source = "./modules/primary_dns_zone"
+  dns_zone_name_insidemodule = var.dns_zone_name
+  dns_zone_namespace_insidemodule = var.dns_zone_namespace
+}
+
 module "http_lb" {
   source = "./modules/http_lb"
   httplbname_insidemodule = var.http_lb_name

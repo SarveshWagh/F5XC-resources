@@ -54,6 +54,7 @@ module "primary_dns_zone" {
 module "http_lb" {
   source = "./modules/http_lb"
   httplbname_insidemodule = var.http_lb_name
+  domainlist_insidemodule = var.domainlist
   mynamespace_insidemodule = var.mynamespace
   http_redirect_insidemodule = var.http_redirect
   add_hsts_insidemodule = var.add_hsts

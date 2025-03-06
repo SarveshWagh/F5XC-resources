@@ -53,6 +53,11 @@ variable "httplbname_insidemodule" {
   type        = string
 }
 
+variable "domainlist_insidemodule" {
+  description = "The list of domain names."
+  type        = list(string)
+}
+
 variable "mynamespace_insidemodule" {
   description = "The name of the namespace."
   type        = string

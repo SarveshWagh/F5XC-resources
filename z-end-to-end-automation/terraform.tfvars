@@ -2,6 +2,7 @@
 
 
 # HTTP LB settings
+domainlist = ["www.ex1.com", "www.ex2.com"]
 http_lb_name = "sarvesh-wagh-http-lb"
 add_hsts = true
 no_mtls = true

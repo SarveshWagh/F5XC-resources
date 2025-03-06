@@ -1,7 +1,7 @@
 resource "volterra_http_loadbalancer" "e2e-httplb" {
   name        = var.httplbname_insidemodule
   namespace   = var.mynamespace_insidemodule
-  domains = [ "www.sarveshwagh.com" ]
+  domains = var.domainlist_insidemodule
 
   https_auto_cert {
     http_redirect = var.http_redirect_insidemodule

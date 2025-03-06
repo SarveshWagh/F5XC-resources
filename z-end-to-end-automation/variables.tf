@@ -43,6 +43,11 @@ variable "http_lb_name" {
   type        = string
 }
 
+variable "domainlist" {
+  description = "The list of domain names."
+  type        = list(string)
+}
+
 variable "firewall_name" {
   description = "The name of the app firewall."
   type        = string

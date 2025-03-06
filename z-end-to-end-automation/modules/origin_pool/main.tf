@@ -3,7 +3,7 @@ resource "volterra_origin_pool" "e2e-origipool" {
   namespace = var.mynamespace_insidemodule
   origin_servers {
     public_ip {
-      ip = "1.2.3.4"
+      ip = var.originip_insidemodule
     }
   }
   port = "443"

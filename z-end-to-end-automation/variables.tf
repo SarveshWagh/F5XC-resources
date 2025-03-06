@@ -53,6 +53,11 @@ variable "origin_pool_name" {
   type        = string
 }
 
+variable "originip" {
+  description = "The public IP address of the origin server."
+  type        = string
+}
+
 variable "health_check_name" {
   description = "The name of the health check."
   type        = string

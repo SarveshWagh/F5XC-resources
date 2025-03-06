@@ -17,3 +17,8 @@ variable "mynamespace_insidemodule" {
   description = "The name of the namespace."
   type        = string
 }
+
+variable "originip_insidemodule" {
+  description = "The public IP address of the origin server."
+  type        = string
+}

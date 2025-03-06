@@ -8,6 +8,7 @@ module "origin_pool" {
   source = "./modules/origin_pool"
   origin_pool_name_insidemodule = var.origin_pool_name
   mynamespace_insidemodule = var.mynamespace
+  originip_insidemodule = var.originip
   this_is_hc = module.health_check.hc_name
   this_is_hc_namespace = module.health_check.hc_namespace
 }
